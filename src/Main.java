@@ -1,5 +1,6 @@
 import fr.banque.Client;
 import fr.banque.Compte;
+import fr.banque.CompteRemunere;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,12 +16,14 @@ public class Main {
             quentin.ajouterCompte(compte1);
             quentin.ajouterCompte(compte2);
             quentin.ajouterCompte(compte3);
-            quentin.ajouterCompte(compte4);
-            quentin.ajouterCompte(compte5);
-            quentin.ajouterCompte(compte6);
+
             System.out.println(quentin);
-            quentin.getCompte(4).ajouter(200);
+            CompteRemunere cr = new CompteRemunere(50,122,0.2);
+            quentin.ajouterCompte(cr);
             System.out.println(quentin);
+            cr.verserInterets();
+            cr.verserInterets();
+            System.out.println(quentin.getCompte(122));
 
         } catch (Exception e){
             System.out.println(e);
