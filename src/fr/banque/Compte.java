@@ -2,7 +2,7 @@ package fr.banque;
 
 import fr.interfaces.Icompte;
 
-public class Compte implements Icompte {
+public class Compte implements Icompte{
 
     private double solde;
     private int numero;
@@ -33,13 +33,13 @@ public class Compte implements Icompte {
         this.numero = numero;
     }
 
-    @Override
+
     public void ajouter(double montant) {
         this.solde += montant;
     }
 
-    @Override
-    public void retirer(double montant) {
+
+    public void retirer(double montant) throws Exception {
         this.solde -= montant;
     }
 
